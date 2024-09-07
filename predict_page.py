@@ -26,7 +26,7 @@ def show_predict():
     st.title("Diabetes Prediction Application")
     st.write("Fill the correct informations in the fields")
     name = st.text_input("Enter your name")
-    age = st.number_input("Enter your Age",min_value=0, max_value=100)
+    age = st.slider("Select your age", min_value=0, max_value=120, value=25)
     hypertenstion = st.number_input("Enter the Hypertension level")
     HbA1c_level = st.number_input("Enter the HbA1c level ")
     blood_glucose_level = st.number_input("Enter the glucose level ")
