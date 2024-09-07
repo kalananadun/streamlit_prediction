@@ -6,7 +6,7 @@ def add_bg_from_url():
         """
         <style>
         .stApp {
-            background-image: url('https://media.post.rvohealth.io/wp-content/uploads/2020/09/doctor_glucosmeter_patient_hand-1200x628-FACEBOOK-1200x628.jpg');
+            background-image: url('https://www.arkanalabs.com/wp-content/uploads/2021/10/diabetes-1536x1158.png');
             background-size: cover;
             background-position: center;
         }
