@@ -33,7 +33,7 @@ def show_predict():
     bmi = st.number_input("Enter the BMI?",min_value=0)
     options = ["Male", "Female"]
     gender = st.radio("Select your status:", options)
-    uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Upload your picture", type=["jpg", "jpeg", "png"])
 
 
     ok = st.button("Submit")
