@@ -33,7 +33,9 @@ def show_predict():
     bmi = st.number_input("Enter the BMI?",min_value=0)
     options = ["Male", "Female"]
     gender = st.radio("Select your status:", options)
-    
+    uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
+
+
     ok = st.button("Submit")
     if ok:
         
@@ -59,7 +61,13 @@ def show_predict():
         })
         
         predict = rfc.predict(X)
-        
+        # Display the uploaded image
+        if uploaded_file is not None:
+            # Convert the uploaded file to bytes
+            bytes_data = uploaded_file.getvalue()
+            
+            # Display the image using st.image
+            st.image(bytes_data, caption='Uploaded Image', use_column_width=True)
         if  predict==1:
             # this person has diabetes 
             message = name + " " + "Unfortunately you have diabetes"
